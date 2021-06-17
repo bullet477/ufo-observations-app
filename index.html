@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>UFO Sightings in the United States from 1941 to 2014</title>
+    <link href="./public/css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""></script>
+
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script> 
+    <script type="text/javascript" src="public/ufo_observations.js"></script>
+  </head>
+  <body>
+
+    <div id="mapid"></div>
+
+    <div class="title">
+      <h1>UFO Sightings in the conterminous United States</h1>
+      <h2>From 1941 to 2014</h2>
+      <span><a target="_blank" rel="noreferrer noopener" href="https://www.kaggle.com/NUFORC/ufo-sightings">Data Source</a></span>
+    </div>
+
+    <div class="legend">
+      <div class="legend-size">
+        <span>Number of reports</span>
+        <div class="size-small"><span>small</span></div>
+        <div class="size-medium"><span>medium</span></div>
+        <div class="size-large"><span>large</span></div>
+      </div>
+      <div class="legend-recentness">
+        <span>Recentness of reports</span>
+        <div class="recentness-recent"><span>reported this month</span></div>
+        <div class="recentness-medium"><span>reported 6 months ago</span></div>
+        <div class="recentness-old"><span>reported a year ago</span></div>
+      </div>
+      <span class="graph-legend">
+        Graph under the timeline shows the total number of reports for that date.
+      </span>
+    </div>
+
+    <div id="timeline">
+      <div class="timeline-line-wrapper" id="js-timeline-line-wrapper">
+        <div class="timeline-line" id="js-timeline-line"></div>
+
+        <div class="timeline-drag-thing" id="js-timeline-drag-thing">
+          <div class="timeline-drag-thing-date" id="js-timeline-drag-thing-date"></div>
+        </div>
+      </div>
+    </div>
+
+  <div id="graph">
+    <div class="graph-wrapper" id="js-graph-wrapper">
+
+    </div>
+  </div>
+
+  </body>
+</html>
